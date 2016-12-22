@@ -1,0 +1,7 @@
+[Telegram]
+token=XXX
+
+[API]
+client_id=AAA
+app_id=BBB
+shared_key=CCC
