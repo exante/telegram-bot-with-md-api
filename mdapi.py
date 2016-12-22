@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 # token expiration time in seconds
 EXPIRATION = 3600
-API_URL = "http://api-stage.exante.eu/md/1.0"
+API_URL = "https://api-demo.exante.eu/md/1.0"
 
 
 class MDApiConnector():
@@ -64,7 +64,7 @@ class MDApiConnector():
         # NB: we use internal symbolId, not ticker
 
         # 86400 (sec) - day duration
-        ohlc = self.__request("/ohlc/%s/86400" % symbolId, {"limit": 1})
+        ohlc = self.__request("/ohlc/%s/86400" % symbolId, {"size": 1})
         return ohlc[0]
 
 
